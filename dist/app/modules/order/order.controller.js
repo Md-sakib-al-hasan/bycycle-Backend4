@@ -31,7 +31,7 @@ const createOrder = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, vo
 const paymentSuccess = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { tranId } = req.params;
     const updatedOrder = yield order_service_1.OrderServices.handlePaymentSuccess(tranId);
-    res.redirect(`${DOMAIN}/cart/${updatedOrder.productId}?message=PaymentSuccessful&tranId=${tranId}&amount=${updatedOrder.price}`);
+    res.redirect(`${DOMAIN}/shop/${updatedOrder.productId}?message=PaymentSuccessful&tranId=${tranId}&amount=${updatedOrder.price}`);
 }));
 const paymentFailure = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { tranId } = req.params;
