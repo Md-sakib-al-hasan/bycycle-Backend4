@@ -23,11 +23,12 @@ const user_service_1 = require("./app/modules/User/user.service");
 const AppError_1 = __importDefault(require("./app/errors/AppError"));
 const http_status_1 = __importDefault(require("http-status"));
 const saleDetails_service_1 = require("./app/modules/saleDetails/saleDetails.service");
+const config_1 = __importDefault(require("./app/config"));
 const app = (0, express_1.default)();
 //parsers
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
-app.use((0, cors_1.default)({ origin: ['http://localhost:5173'], credentials: true }));
+app.use((0, cors_1.default)({ origin: [`${config_1.default.domain_fontend}`], credentials: true }));
 app.use('/api/v1', routes_1.default);
 app.get('/', (req, res) => {
     res.send('SuccessFully run server');

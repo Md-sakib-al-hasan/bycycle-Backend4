@@ -9,13 +9,14 @@ import { UserServices } from './app/modules/User/user.service';
 import AppError from './app/errors/AppError';
 import status from 'http-status';
 import { SalesDeatilsServerice } from './app/modules/saleDetails/saleDetails.service';
+import config from './app/config';
 
 const app: Application = express();
 
 //parsers
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ['http://localhost:5173'], credentials: true }));
+app.use(cors({ origin: [`${config.domain_fontend}`], credentials: true }));
 app.use('/api/v1', router);
 app.get('/', (req: Request, res: Response) => {
   res.send('SuccessFully run server');
