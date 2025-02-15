@@ -24,7 +24,7 @@ const paymentSuccess = catchAsync(async (req, res) => {
   const { tranId } = req.params;
   const updatedOrder = await OrderServices.handlePaymentSuccess(tranId);
   res.redirect(
-    `${DOMAIN}/shop/${updatedOrder.productId}?message=PaymentSuccessful&tranId=${tranId}&amount=${updatedOrder.price}`,
+    `${DOMAIN}/shop?message=PaymentSuccessful&tranId=${tranId}&amount=${updatedOrder.price}`,
   );
 });
 
