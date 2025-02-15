@@ -19,11 +19,7 @@ router.delete(
   validateRequest(ProductValiditon.productDeletedSchema),
   ProductController.deleteProduct,
 );
-router.get(
-  '/getAllProduct',
-  auth(USER_ROLE.admin, USER_ROLE.superAdmin),
-  ProductController.getallproduct,
-);
+router.get('/getAllProduct', ProductController.getallproduct);
 router.patch(
   '/getSingleProduct',
   auth(USER_ROLE.admin, USER_ROLE.customer, USER_ROLE.superAdmin),

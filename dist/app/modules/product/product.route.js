@@ -13,6 +13,6 @@ const user_constant_1 = require("../User/user.constant");
 const router = express_1.default.Router();
 router.post('/create-product', (0, auth_1.default)(user_constant_1.USER_ROLE.admin, user_constant_1.USER_ROLE.superAdmin), (0, validateRequest_1.default)(product_validation_1.ProductValiditon.productSchema), product_controller_1.ProductController.createProduct);
 router.delete('/delete-product', (0, auth_1.default)(user_constant_1.USER_ROLE.superAdmin), (0, validateRequest_1.default)(product_validation_1.ProductValiditon.productDeletedSchema), product_controller_1.ProductController.deleteProduct);
-router.get('/getAllProduct', (0, auth_1.default)(user_constant_1.USER_ROLE.admin, user_constant_1.USER_ROLE.superAdmin), product_controller_1.ProductController.getallproduct);
+router.get('/getAllProduct', product_controller_1.ProductController.getallproduct);
 router.patch('/getSingleProduct', (0, auth_1.default)(user_constant_1.USER_ROLE.admin, user_constant_1.USER_ROLE.customer, user_constant_1.USER_ROLE.superAdmin), (0, validateRequest_1.default)(product_validation_1.ProductValiditon.productDeletedSchema), product_controller_1.ProductController.getsingelProduct);
 exports.ProductRoutes = router;
