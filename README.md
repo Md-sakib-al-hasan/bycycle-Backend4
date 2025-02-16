@@ -41,6 +41,33 @@ To fully use the **frontend** of this website, the **backend** must be running. 
 - **Shopping Cart**: Manages the user's shopping cart and prepares data for checkout.
 - **Payment Gateway**: Processes payments securely via SSLCommerz.
 
+
+## Visite webside
+ 
+## 🔐 Authentication Required  
+
+This project requires authentication to access. Please use the credentials provided by the administrator.  
+
+
+
+### 🧪 Test Credentials (For online Testing)
+
+For testing purposes, you can use the following test credentials:
+
+- **SuperAdminEmail:** `sakib@gmil.com`
+- **SuperAdminPassword:** `sakib!123`
+
+
+- **CustomerEmail:** `just create a account/sigine/google/github`
+
+
+
+
+⚠️ **Do not use these credentials in production!**  
+
+If you're a developer running this locally, you can create a test account in the database or use environment variables for securing access.
+
+
 ## Installation
 
 ### Prerequisites
