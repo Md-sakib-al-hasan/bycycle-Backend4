@@ -58,7 +58,7 @@ For testing purposes, you can use the following test credentials:
 - **SuperAdminPassword:** `sakib!123`
 
 
-- **CustomerEmail:** `just create a account/sigine/google/github`
+- **Customer:** `just create a account/sigine/google/github`
 
 
 
